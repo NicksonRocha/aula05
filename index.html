@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="Estilo.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 05</title>
+</head>
+<body>
+    <div class="caixa">
+        <h1>Sistema de multas - aula 06</h1>
+        <P>Velocidade do carro</P> 
+        <input type="number" name="velociade" id="velocidade"> <strong id="quilometros">KM/h</strong>
+        <input type="submit" value="Verificar" onclick="calcular()">
+        <div id="vResultado"></div>
+        <script>
+            // cira a função calcular
+            function calcular(){
+                // define a varialvel velocidade pegando o ID do input velociade
+                let velocidade = document.getElementById('velocidade');
+                let vResultado = document.getElementById('vResultado');
+                let vel = Number(velocidade.value);
+                vResultado.innerHTML ='Sua velocidade atual é de <strong> ' + vel + 'KM/h <strong>';
+                if(vel > 50){
+                    vResultado.innerHTML += ` Você está <strong>MULTADO!</STRONG>`;
+                        // alert(`Você está MULTADO! Pois sua velocidade é ${vel} KM/h. `);
+                        
+                } else {
+                    vResultado.innerHTML +=  ` Parabéns, você não foi multado.`;
+                }
+            }
+        </script>
+    </div>
+</body>
+</html>
