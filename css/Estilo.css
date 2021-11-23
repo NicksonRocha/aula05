@@ -7,10 +7,9 @@
 
 body {
     -moz-box-align: center; 
-    background-color: rgb(201, 29, 29);
     text-align: center;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: black;
 
 }
 
@@ -24,5 +23,9 @@ body {
     margin: 0 auto;
     padding: 75px;
 
+}
+
+#quilometros {
+    color: white;
 }
 
